@@ -1,0 +1,453 @@
+2019-07-01 15:34:45.848  INFO 9027 --- [main] org.misha.Application                    : Starting Application on mshevelin with PID 9027 (/home/mshevelin/workspace/camunda-services/camunda-server/target/classes started by mshevelin in /home/mshevelin/workspace/camunda-services/camunda-server)
+2019-07-01 15:34:45.850 DEBUG 9027 --- [main] org.misha.Application                    : Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2019-07-01 15:34:45.852  INFO 9027 --- [main] org.misha.Application                    : No active profile set, falling back to default profiles: default
+2019-07-01 15:34:45.894  INFO 9027 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4218d6a3: startup date [Mon Jul 01 15:34:45 MSK 2019]; root of context hierarchy
+2019-07-01 15:34:46.275  INFO 9027 --- [main] o.s.i.config.IntegrationRegistrar        : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019-07-01 15:34:46.284  INFO 9027 --- [main] a.ConfigurationClassBeanDefinitionReader : Skipping bean definition for [BeanMethod:name=output,declaringClass=org.misha.customer.messages.send.impl.TermsSenderConfig]: a definition for bean 'output' already exists. This top-level bean definition is considered as an override.
+2019-07-01 15:34:46.359  INFO 9027 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'requestContextFilter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jersey/JerseyAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2019-07-01 15:34:46.551  INFO 9027 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019-07-01 15:34:46.553  INFO 9027 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2019-07-01 15:34:46.560  INFO 9027 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-07-01 15:34:46.616  INFO 9027 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$d2ecdb32] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-01 15:34:46.642  INFO 9027 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff3ac9af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-01 15:34:46.676  INFO 9027 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$6a2c84de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-01 15:34:46.847  INFO 9027 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2019-07-01 15:34:46.859  INFO 9027 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-01 15:34:46.860  INFO 9027 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-07-01 15:34:46.862  INFO 9027 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/mnt/sda2/IDE/idea-IU-172.4574.19/bin:/mnt/sda2/IDE/idea-IU-172.4574.19/bin:/home/mshevelin/IDE/idea-IU-172.4574.19/bin::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-07-01 15:34:46.938  INFO 9027 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-01 15:34:46.938  INFO 9027 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1044 ms
+2019-07-01 15:34:46.968  INFO 9027 --- [localhost-startStop-1] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Configuring camunda rest api.
+2019-07-01 15:34:46.980  INFO 9027 --- [localhost-startStop-1] .c.b.s.b.s.r.CamundaJerseyResourceConfig : Finished configuring camunda rest api.
+2019-07-01 15:34:47.206  INFO 9027 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet org.camunda.bpm.spring.boot.starter.rest.CamundaJerseyResourceConfig mapped to [/rest/*]
+2019-07-01 15:34:47.207  INFO 9027 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-07-01 15:34:47.212  INFO 9027 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-01 15:34:47.212  INFO 9027 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-01 15:34:47.212  INFO 9027 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-01 15:34:47.212  INFO 9027 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-01 15:34:47.373 DEBUG 9027 --- [main] o.m.c.m.send.impl.TermsMessageSender     : channel: class org.springframework.integration.channel.DirectChannel is output
+2019-07-01 15:34:47.376 DEBUG 9027 --- [main] org.misha.SendMessageDelegate            : 
+
+
+SendTermsMessageDelegate
+2019-07-01 15:34:47.428  INFO 9027 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService  'taskScheduler'
+2019-07-01 15:34:47.486 DEBUG 9027 --- [main] o.m.c.m.send.impl.TermsMessageSender     : channel: class org.springframework.integration.channel.DirectChannel is output
+2019-07-01 15:34:47.580  INFO 9027 --- [main] org.camunda.bpm.spring.boot              : STARTER-SB040 Setting up jobExecutor with corePoolSize=3, maxPoolSize:10
+2019-07-01 15:34:47.584  INFO 9027 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'camundaTaskExecutor'
+2019-07-01 15:34:47.695  INFO 9027 --- [main] org.camunda.bpm.engine.cfg               : ENGINE-12003 Plugin 'CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaJobConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, camundaDeploymentConfiguration, CreateAdminUserConfiguration[adminUser=AdminUserProperty[id=demo, firstName=Demo, lastName=Demo, email=demo@localhost, password=demo]], failedJobConfiguration, CreateFilterConfiguration[filterName=All], SpinProcessEnginePlugin]' activated on process engine 'default'
+2019-07-01 15:34:49.019  INFO 9027 --- [main] org.camunda.bpm.spring.boot              : STARTER-SB021 Auto-Deploying resources: [file [/home/mshevelin/workspace/camunda-services/camunda-server/target/classes/sum-process.bpmn]]
+2019-07-01 15:34:49.084  INFO 9027 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-07-01 15:34:49.140  INFO 9027 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-07-01 15:34:51.552  INFO 9027 --- [main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql'
+2019-07-01 15:34:51.579  INFO 9027 --- [main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql'
+2019-07-01 15:34:51.588  INFO 9027 --- [main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql'
+2019-07-01 15:34:51.600  INFO 9027 --- [main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql'
+2019-07-01 15:34:51.606  INFO 9027 --- [main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql'
+2019-07-01 15:34:51.612  INFO 9027 --- [main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql'
+2019-07-01 15:34:51.620  INFO 9027 --- [main] org.camunda.bpm.engine.persistence       : ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql'
+2019-07-01 15:34:51.633  INFO 9027 --- [main] org.camunda.bpm.engine.persistence       : ENGINE-03067 No history level property found in database
+2019-07-01 15:34:51.633  INFO 9027 --- [main] org.camunda.bpm.engine.persistence       : ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelFull(name=full, id=3)
+2019-07-01 15:34:51.656  INFO 9027 --- [main] org.camunda.bpm.engine                   : ENGINE-00001 Process Engine default created.
+2019-07-01 15:34:51.705  INFO 9027 --- [main] org.camunda.bpm.spring.boot              : STARTER-SB010 creating initial Admin User: AdminUserProperty[id=demo, firstName=Demo, lastName=Demo, email=demo@localhost, password=demo]
+2019-07-01 15:34:51.711  INFO 9027 --- [main] org.camunda.bpm.spring.boot              : STARTER-SB015 create initial filter: id=9f3bf0a4-9bfc-11e9-bba0-4889e7c8dac5 name=All
+2019-07-01 15:34:51.904  INFO 9027 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-01 15:34:52.031  INFO 9027 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4218d6a3: startup date [Mon Jul 01 15:34:45 MSK 2019]; root of context hierarchy
+2019-07-01 15:34:52.069  INFO 9027 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-07-01 15:34:52.069  INFO 9027 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-07-01 15:34:52.081  INFO 9027 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2019-07-01 15:34:52.092  INFO 9027 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-01 15:34:52.092  INFO 9027 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-01 15:34:52.092  INFO 9027 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/lib/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-01 15:34:52.093  INFO 9027 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/api/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-01 15:34:52.093  INFO 9027 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/app/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-07-01 15:34:52.141  INFO 9027 --- [main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazyProcessEnginesFilter@50c0f505
+2019-07-01 15:34:52.176  INFO 9027 --- [main] o.c.b.s.b.s.w.f.LazyInitRegistration     : lazy initialized org.camunda.bpm.spring.boot.starter.webapp.filter.LazySecurityFilter@57e2b289
+2019-07-01 15:34:52.424  INFO 9027 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application.input' has 1 subscriber(s).
+2019-07-01 15:34:52.425  INFO 9027 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-07-01 15:34:52.426  INFO 9027 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-07-01 15:34:52.431  INFO 9027 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'integrationMbeanExporter' has been autodetected for JMX exposure
+2019-07-01 15:34:52.434  INFO 9027 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'integrationMbeanExporter': registering with JMX server as MBean [org.springframework.integration.monitor:name=integrationMbeanExporter,type=IntegrationMBeanExporter]
+2019-07-01 15:34:52.455  INFO 9027 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2019-07-01 15:34:52.461  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering beans for JMX exposure on startup
+2019-07-01 15:34:52.461  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel input
+2019-07-01 15:34:52.463  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Located managed bean 'org.springframework.integration:type=MessageChannel,name=input': registering with JMX server as MBean [org.springframework.integration:type=MessageChannel,name=input]
+2019-07-01 15:34:52.480  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel output
+2019-07-01 15:34:52.481  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Located managed bean 'org.springframework.integration:type=MessageChannel,name=output': registering with JMX server as MBean [org.springframework.integration:type=MessageChannel,name=output]
+2019-07-01 15:34:52.486  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2019-07-01 15:34:52.487  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Located managed bean 'org.springframework.integration:type=MessageChannel,name=errorChannel': registering with JMX server as MBean [org.springframework.integration:type=MessageChannel,name=errorChannel]
+2019-07-01 15:34:52.497  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2019-07-01 15:34:52.499  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Located managed bean 'org.springframework.integration:type=MessageChannel,name=nullChannel': registering with JMX server as MBean [org.springframework.integration:type=MessageChannel,name=nullChannel]
+2019-07-01 15:34:52.506  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler org.springframework.cloud.stream.binding.StreamListenerMessageHandler@105db94d
+2019-07-01 15:34:52.507  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Located managed bean 'org.springframework.integration:type=MessageHandler,name=org.springframework.cloud.stream.binding.StreamListenerMessageHandler@105db94d,bean=handler': registering with JMX server as MBean [org.springframework.integration:type=MessageHandler,name=org.springframework.cloud.stream.binding.StreamListenerMessageHandler@105db94d,bean=handler]
+2019-07-01 15:34:52.515  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
+2019-07-01 15:34:52.518  INFO 9027 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Located managed bean 'org.springframework.integration:type=MessageHandler,name=errorLogger,bean=internal': registering with JMX server as MBean [org.springframework.integration:type=MessageHandler,name=errorLogger,bean=internal]
+2019-07-01 15:34:52.528  INFO 9027 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase -2147482648
+2019-07-01 15:34:52.547  INFO 9027 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6cdbe5ec: startup date [Mon Jul 01 15:34:52 MSK 2019]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4218d6a3
+2019-07-01 15:34:52.565  INFO 9027 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-07-01 15:34:52.618  INFO 9027 --- [main] org.camunda.bpm.engine.jobexecutor       : ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor].
+2019-07-01 15:34:52.619  INFO 9027 --- [JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor]] org.camunda.bpm.engine.jobexecutor       : ENGINE-14018 JobExecutor[org.camunda.bpm.engine.spring.components.jobexecutor.SpringJobExecutor] starting to acquire jobs
+2019-07-01 15:34:52.670  INFO 9027 --- [main] o.s.c.s.b.k.p.KafkaTopicProvisioner      : Using kafka topic for outbound: customer-to-contractor
+2019-07-01 15:34:52.671  INFO 9027 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2019-07-01 15:34:52.689  INFO 9027 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.1
+2019-07-01 15:34:52.689  INFO 9027 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : c0518aa65f25317e
+2019-07-01 15:34:52.904  INFO 9027 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2019-07-01 15:34:52.912  INFO 9027 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.1
+2019-07-01 15:34:52.912  INFO 9027 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : c0518aa65f25317e
+2019-07-01 15:34:52.916  INFO 9027 --- [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2019-07-01 15:34:52.923  INFO 9027 --- [main] o.s.integration.channel.DirectChannel    : Channel 'application.output' has 1 subscriber(s).
+2019-07-01 15:34:52.925  INFO 9027 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2019-07-01 15:34:52.925  INFO 9027 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-07-01 15:34:52.925  INFO 9027 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2019-07-01 15:34:52.926  INFO 9027 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started _org.springframework.integration.errorLogger
+2019-07-01 15:34:52.926  INFO 9027 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147482647
+2019-07-01 15:34:52.937  INFO 9027 --- [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2019-07-01 15:34:52.939  INFO 9027 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.1
+2019-07-01 15:34:52.939  INFO 9027 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : c0518aa65f25317e
+2019-07-01 15:34:53.067  INFO 9027 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 100
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = anonymous.d0904019-d73b-4cd9-b65a-bf4a4b5d1893
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2019-07-01 15:34:53.107  INFO 9027 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.1
+2019-07-01 15:34:53.107  INFO 9027 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : c0518aa65f25317e
+2019-07-01 15:34:53.126  INFO 9027 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.contractor-to-customer.anonymous.d0904019-d73b-4cd9-b65a-bf4a4b5d1893.errors' has 1 subscriber(s).
+2019-07-01 15:34:53.127  INFO 9027 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.contractor-to-customer.anonymous.d0904019-d73b-4cd9-b65a-bf4a4b5d1893.errors' has 0 subscriber(s).
+2019-07-01 15:34:53.127  INFO 9027 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.contractor-to-customer.anonymous.d0904019-d73b-4cd9-b65a-bf4a4b5d1893.errors' has 1 subscriber(s).
+2019-07-01 15:34:53.127  INFO 9027 --- [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.contractor-to-customer.anonymous.d0904019-d73b-4cd9-b65a-bf4a4b5d1893.errors' has 2 subscriber(s).
+2019-07-01 15:34:53.131  INFO 9027 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 100
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = anonymous.d0904019-d73b-4cd9-b65a-bf4a4b5d1893
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2019-07-01 15:34:53.133  INFO 9027 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.1
+2019-07-01 15:34:53.133  INFO 9027 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : c0518aa65f25317e
+2019-07-01 15:34:53.134  INFO 9027 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 
+2019-07-01 15:34:53.136  INFO 9027 --- [main] s.i.k.i.KafkaMessageDrivenChannelAdapter : started org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@38f502fc
+2019-07-01 15:34:53.137  INFO 9027 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2019-07-01 15:34:53.168  INFO 9027 --- [contractor-to-customer.container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=anonymous.d0904019-d73b-4cd9-b65a-bf4a4b5d1893] Discovered group coordinator mshevelin:9092 (id: 2147483647 rack: null)
+2019-07-01 15:34:53.170  INFO 9027 --- [contractor-to-customer.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=anonymous.d0904019-d73b-4cd9-b65a-bf4a4b5d1893] Revoking previously assigned partitions []
+2019-07-01 15:34:53.170  INFO 9027 --- [contractor-to-customer.container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$1  : partitions revoked: []
+2019-07-01 15:34:53.170  INFO 9027 --- [contractor-to-customer.container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=anonymous.d0904019-d73b-4cd9-b65a-bf4a4b5d1893] (Re-)joining group
+2019-07-01 15:34:53.445  INFO 9027 --- [contractor-to-customer.container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-2, groupId=anonymous.d0904019-d73b-4cd9-b65a-bf4a4b5d1893] Successfully joined group with generation 1
+2019-07-01 15:34:53.447  INFO 9027 --- [contractor-to-customer.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-2, groupId=anonymous.d0904019-d73b-4cd9-b65a-bf4a4b5d1893] Setting newly assigned partitions [contractor-to-customer-0]
+2019-07-01 15:34:53.451  INFO 9027 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2019-07-01 15:34:53.452  INFO 9027 --- [main] org.misha.Application                    : Started Application in 7.922 seconds (JVM running for 8.433)
+2019-07-01 15:34:53.454  INFO 9027 --- [main] s.b.s.e.JobExecutorStartingEventListener : job executor is already active
+2019-07-01 15:34:53.454  INFO 9027 --- [contractor-to-customer.container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$1  : partitions assigned: [contractor-to-customer-0]
+2019-07-01 15:35:26.559  INFO 9027 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-07-01 15:35:26.559  INFO 9027 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-07-01 15:35:26.576  INFO 9027 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2019-07-01 15:35:28.774  WARN 9027 --- [http-nio-8090-exec-7] o.glassfish.jersey.servlet.WebComponent  : A servlet request to the URI http://localhost:8090/api/admin/auth/user/default/login/tasklist contains form parameters in the request body but the request body has been consumed by the servlet or a servlet filter accessing the request parameters. Only resource methods using @FormParam will work as expected. Resource methods consuming the request body by other means will not work as expected.
+2019-07-01 15:35:38.757 DEBUG 9027 --- [http-nio-8090-exec-6] o.m.c.m.send.impl.TermsMessageSender     : 
+
+Sender: TermsMessageSender$$EnhancerBySpringCGLIB$$2412424b;
+message: Message(messageType=TermsMessageContent, id=b9c22850-2f41-41fb-af44-4beac7bb4b11, traceId=d92b7bbf-a151-4106-a68f-ce5d7b079dd1, sender=TermsMessageSender$$EnhancerBySpringCGLIB$$2412424b, timestamp=Mon Jul 01 15:35:38 MSK 2019, correlationId=f2ad6d48-b2d9-410e-a38c-0b2239d40a7b, payload=TermsMessageContent(id=4ac334ad-f23c-47aa-b740-f51dc8f0b491, left=1, right=2))
+2019-07-01 15:35:38.771  INFO 9027 --- [ForkJoinPool.commonPool-worker-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2019-07-01 15:35:38.773  INFO 9027 --- [ForkJoinPool.commonPool-worker-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.1
+2019-07-01 15:35:38.773  INFO 9027 --- [ForkJoinPool.commonPool-worker-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : c0518aa65f25317e
+2019-07-01 15:35:38.932 DEBUG 9027 --- [contractor-to-customer.container-0-C-1] o.m.c.m.l.ContractorsMessageListener     : 
+
+---------------
+
+Receiver: ContractorsMessageListener$$EnhancerBySpringCGLIB$$1b800131;
+json received: {"messageType":"SumMessageContent","id":"ecf9774e-84c9-4246-a206-86b143480402","traceId":"b211394f-6f8b-427d-a746-31e82508a772","sender":"CustomersMessageListener$$EnhancerBySpringCGLIB$$f3264234","timestamp":"2019-07-01T12:35:38.869+0000","correlationId":"f2ad6d48-b2d9-410e-a38c-0b2239d40a7b","payload":{"sum":3,"left":1,"right":2}}
+2019-07-01 15:35:38.936 DEBUG 9027 --- [contractor-to-customer.container-0-C-1] o.m.c.m.l.ContractorsMessageListener     : 
+
+---------------
+
+Receiver: ContractorsMessageListener$$EnhancerBySpringCGLIB$$1b800131;
+message:SumMessageContent(sum=3, left=1, right=2)
