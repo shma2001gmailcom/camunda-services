@@ -13,6 +13,7 @@ import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Component;
 
+import java.util.Observable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
@@ -24,7 +25,7 @@ import java.util.concurrent.Future;
 @Component
 @EnableBinding(Processor.class)
 @Slf4j
-class CustomersMessageListener {
+class CustomersMessageListener extends Observable {
     private final Adder adder;
 
     CustomersMessageListener(Adder adder) {

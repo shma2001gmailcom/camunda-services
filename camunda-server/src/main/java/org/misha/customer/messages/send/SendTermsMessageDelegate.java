@@ -20,7 +20,7 @@ public class SendTermsMessageDelegate extends SendMessageDelegate<TermsMessageCo
 
     public SendTermsMessageDelegate(@Qualifier("termsMessageSender") Sender sender) {
         super(sender);
-        this.messageSender = sender;
+        messageSender = sender;
     }
 
     @Override
@@ -29,7 +29,7 @@ public class SendTermsMessageDelegate extends SendMessageDelegate<TermsMessageCo
         msg.setMessageType("TermsMessageContent");
         msg.setCorrelationId(UUID.randomUUID().toString());//initial request
         msg.setSender(messageSender.getClass().getSimpleName());
-        msg.setPayload(TermsMessageContent.builder().id(UUID.randomUUID().toString()).left(1).right(2).build());
+        msg.setPayload(TermsMessageContent.builder().id(UUID.randomUUID().toString()).left(0).right(1).build());
         return msg;
     }
 }

@@ -89,7 +89,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>org.misha.Application</mainClass>
+                    <mainClass>org.misha.ContractorApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>

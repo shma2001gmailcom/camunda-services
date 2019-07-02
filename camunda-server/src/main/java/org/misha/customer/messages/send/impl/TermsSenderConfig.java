@@ -10,6 +10,7 @@ import org.springframework.messaging.MessageChannel;
 class TermsSenderConfig {
     private final MessageChannel output;
 
+
     public TermsSenderConfig(MessageChannel output) {this.output = output;}
 
     @Bean
