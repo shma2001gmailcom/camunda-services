@@ -14,6 +14,7 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.Observable;
 
 /**
@@ -31,7 +32,7 @@ class ContractorsMessageListener extends Observable implements JavaDelegate {
     }
 
     @StreamListener(target = Sink.INPUT)
-    public void messageReceived(String messageJson) throws Exception {
+    public void messageReceived(String messageJson) throws IOException {
         setChanged();
         log.debug("\n\n---------------\n\nReceiver: {};\njson received: {}", getClass().getSimpleName(), messageJson);
         final TypeReference<Message<JsonNode>> typeRef = new TypeReference<Message<JsonNode>>() {};

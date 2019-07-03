@@ -6,7 +6,7 @@ grep='grep-pid'
 cd ${zookeeper}/bin/
 ./zkServer.sh start
 echo `${pwd}/${grep} quorum`
-sleep 5
+sleep 15
 cd ${kafka}
 rm -r ${kafka_logs}/
 cd ${kafka}/bin/

@@ -13,6 +13,7 @@ import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.Observable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
@@ -34,7 +35,7 @@ class CustomersMessageListener extends Observable {
 
     @StreamListener(target = Processor.INPUT)
     @SendTo(Processor.OUTPUT)
-    public Message<SumMessageContent> messageReceived(String messageJson) throws Exception {
+    public Message<SumMessageContent> messageReceived(String messageJson) throws IOException, ExecutionException {
         log.debug("\n\n---------------\n\nProcessor: json received={}", messageJson);
         final TypeReference<Message<TermsMessageContent>> typeRef =
                 new TypeReference<Message<TermsMessageContent>>() {};
@@ -51,13 +52,19 @@ class CustomersMessageListener extends Observable {
 
     private Message<SumMessageContent> makeReplyMessage(Message<TermsMessageContent> message,
                                                         Future<Integer> calculationPlan
-    ) throws ExecutionException, InterruptedException {
+    ) throws ExecutionException {
         final Message<SumMessageContent> msg = new Message<>();
         msg.setMessageType("SumMessageContent");
         msg.setSender(getClass().getSimpleName());
         msg.setCorrelationId(message.getCorrelationId());//populate correlation from incoming message
         final SumMessageContent content = new SumMessageContent();
-        final Integer result = calculationPlan.get();
+        final Integer result;
+        try {
+            result = calculationPlan.get();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new RuntimeException(e);
+        }
         content.setSum(result);
         content.setLeft(message.getPayload().getLeft());
         content.setRight(message.getPayload().getRight());

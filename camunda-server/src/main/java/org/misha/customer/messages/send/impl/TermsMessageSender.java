@@ -48,16 +48,21 @@ public class TermsMessageSender implements Sender, Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        SumMessageContent sumMessageContent = (SumMessageContent) arg;
         final Message<TermsMessageContent> msg = new Message<>();
         msg.setMessageType("TermsMessageContent");
         msg.setCorrelationId(UUID.randomUUID().toString());//initial request
         msg.setSender(getClass().getSimpleName());
-        msg.setPayload(TermsMessageContent.builder().id(UUID.randomUUID().toString()).left(1).right(sumMessageContent.getSum()).build());
+        msg.setPayload(TermsMessageContent.builder()
+                                          .id(UUID.randomUUID().toString())
+                                          .left(1)
+                                          .right(((SumMessageContent) arg).getSum())
+                                          .build());
         try {
             sleep(2000);
         } catch (InterruptedException e) {
-            e.printStackTrace();Thread.currentThread().interrupt();
-        } send(msg);
+            Thread.currentThread().interrupt();
+            throw new RuntimeException("interrupted");
+        }
+        send(msg);
     }
 }
